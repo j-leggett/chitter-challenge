@@ -8,9 +8,9 @@ If the table is already created in the database, you can skip this step.
 
 Otherwise, [follow this recipe to design and create the SQL schema for your table](./single_table_design_recipe_template.md).
 
-*In this template, we'll use an example table `students`*
+_In this template, we'll use an example table `students`_
 
-```
+```pt
 # EXAMPLE
 
 Table: users
@@ -40,7 +40,7 @@ TRUNCATE TABLE users RESTART IDENTITY; -- replace with your own table name.
 -- Below this line there should only be `INSERT` statements.
 -- Replace these statements with your own seed data.
 
-INSERT INTO users (name, username, email_address, password) VALUES ('Jack', 'jack_chitter', 'Jack@mail.com', 'pass1');
+INSERT INTO users (name, username, email_address, password) VALUES ('Jack', 'jack_chitter', 'jack@mail.com', 'pass1');
 INSERT INTO users (name, username, email_address, password) VALUES ('Charlotee', 'chaz_chitter', 'chaz@mail.com', 'pass2');
 ```
 
@@ -95,7 +95,7 @@ end
 # student.name
 ```
 
-*You may choose to test-drive this class, but unless it contains any more logic than the example above, it is probably not needed.*
+_You may choose to test-drive this class, but unless it contains any more logic than the example above, it is probably not needed._
 
 ## 5. Define the Repository Class interface
 

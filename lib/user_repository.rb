@@ -1,12 +1,21 @@
-class StudentRepository
+require_relative './user'
+class UserRepository
 
-  # Selecting all records
-  # No arguments
   def all
-    # Executes the SQL query:
-    # SELECT id, name, cohort_name FROM students;
+    sql = 'SELECT id, name, username, email_address, password FROM users;'
+    result_set = DatabaseConnection.exec_params(sql, [])
 
-    # Returns an array of Student objects.
+    users = []
+    result_set.each do |record|
+      user = User.new
+      user.id = record['id']
+      user.name = record['name']
+      user.username = record['username']
+      user.email_address = record['email_address']
+      user.password = record['password']
+      users << user
+    end
+    return users
   end
 
   # Gets a single record by its ID

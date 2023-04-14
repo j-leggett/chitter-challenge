@@ -8,5 +8,5 @@ class Application < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  #tests in here
+  # tests in here
 end
